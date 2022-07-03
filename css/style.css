@@ -84,6 +84,74 @@ body{
     background: #770302;
 }
 
+.menu{
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 7;
+    width: 100%;
+    transition: all .5s;
+}
+
+.menu--active{
+    left: 0;
+}
+
+.menu-container{
+    position: relative;
+}
+
+.menu__close-btn{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 31px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.menu__close-btn::after,
+.menu__close-btn::before{
+    content: "";
+    width: 70px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    transform-origin: left;
+}
+.menu__close-btn::after{
+    transform: rotate(45deg);
+}
+.menu__close-btn::before{
+    transform: rotate(-45deg);
+    bottom: -1px;
+}
+
+.menu__list{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.menu__list a{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    padding: 30px 25px 14px 0;
+    border-bottom: 3px solid #B70021;
+    min-width: 368px;
+    transition: all .5s;
+}
+
+.menu__list a:hover{
+    border-bottom: 3px solid #fff;
+    color: #B70021;
+    transform: scale(1.2);
+    margin-left: 36px;
+}
+
 .slider__item{
     height: 100vh;
     background-repeat: no-repeat;
